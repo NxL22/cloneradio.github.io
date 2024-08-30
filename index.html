@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Radio(🔥)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <body>
+        <header>
+            <div class="container">
+                <h1>Code Radio(🔥)</h1>
+                <div class="text-center">
+                    <h2>Welcome to Code Radio.</h2>
+                    <p class="subtitle">24/7 music designed for coding.</p>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <div class="video-placeholder">
+                <video autoplay muted loop id="backgroundVideo">
+                    <source src="./assets/videos/teclear.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+        </main>
+    
+        <div class="audio-controls">
+            <div class="container">
+                <div class="audio-container">
+                    <div class="control-buttons">
+                        <button id="playPauseBtn" class="btn" aria-label="Play or Pause">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                    <input type="range" class="volume-slider" min="0" max="100" value="50" aria-label="Volume" />
+                    <div class="now-playing">
+                        <p class="track-info">Now Playing: <span id="trackName">Loading...</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <audio id="audioPlayer" loop>
+            <source src="https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    
+        <div id="userCount"></div>
+    
+        <script src="script.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,182 @@
+/* Reseteo de márgenes y configuración de box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Aseguramos que el html y el body ocupen toda la pantalla y evitamos el scroll */
+html, body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #111827; /* Color de fondo para todo el cuerpo */
+    color: white;
+}
+
+/* Estilo del header */
+header {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    flex-shrink: 0; /* Asegura que el header no se encoja */
+    z-index: 10;
+    text-align: center;
+}
+
+/* Estilo del main para contener el video */
+main {
+    flex: 1; /* El main ocupa el espacio restante */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Fondo negro para áreas no cubiertas */
+    overflow: hidden; /* Evita el scroll en el main */
+}
+
+/* Contenedor del video */
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Fondo negro */
+    position: relative;
+}
+
+/* Video de fondo ajustado */
+#backgroundVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video se vea completo */
+}
+
+/* Estilo del footer o barra de controles */
+.audio-controls {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 1rem;
+    flex-shrink: 0;
+    z-index: 10;
+    border-top: 2px solid #0026ff; 
+    box-shadow: 0 -4px 10px #0026ff; 
+
+}
+
+
+/* Contenedor máximo para centrar el contenido */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo del centro de texto */
+.text-center {
+    text-align: center;
+}
+
+/* Estilos para los controles de audio */
+.audio-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.volume-slider {
+    width: 100px;
+}
+
+/* Estilo del área "Now Playing" */
+.now-playing {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#albumArt {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.track-info {
+    font-size: 1rem;
+    color: #9ca3af;
+}
+
+/* Estilo del contador de usuarios */
+#userCount {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+
+/* Contenedor principal para la información de la música */
+.audio-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem; /* Añade espacio entre los elementos */
+    flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
+    padding: 0 1rem; /* Añade padding horizontal para más espacio */
+}
+
+/* Estilo de la imagen del álbum */
+#albumArt {
+    width: 60px; /* Aumenta el tamaño de la imagen para mayor visibilidad */
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Estilo del contenedor de la información de la canción */
+.now-playing {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Añade espacio entre la imagen y el texto */
+    color: white;
+    flex-grow: 1; /* Permite que este contenedor crezca según el espacio disponible */
+    overflow: hidden; /* Asegura que el contenido no desborde */
+}
+
+/* Ajuste del texto para evitar que se sobreponga */
+.track-info {
+    color: #9ca3af;
+    font-size: 1rem;
+    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+    overflow: hidden; /* Oculta cualquier texto que se desborde */
+    text-overflow: ellipsis; /* Añade "..." si el texto es demasiado largo */
+}
+
+/* Estilo para el contador de oyentes */
+#userCount {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+}
